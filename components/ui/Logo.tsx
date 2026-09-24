@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type LogoProps = {
   tone?: "dark" | "light";
   showWordmark?: boolean;
@@ -6,6 +8,7 @@ type LogoProps = {
 
 /**
  * Servy wordmark + app mark. `tone="light"` renders for dark backgrounds.
+ * Uses the cropped brand logo so it fits the navbar icon slot.
  */
 const Logo = ({
   tone = "dark",
@@ -15,20 +18,19 @@ const Logo = ({
   const isLight = tone === "light";
 
   return (
-    <span className={`inline-flex items-center gap-3 ${className}`}>
+    <span className={`inline-flex items-center gap-2.5 ${className}`}>
       <span
-        className={`grid size-10 shrink-0 place-items-center rounded-2xl ${
-          isLight ? "bg-white" : "bg-brand"
-        }`}
+        className="grid size-10 shrink-0 place-items-center overflow-hidden rounded-xl bg-white shadow-[0_2px_10px_-4px_rgba(32,33,36,0.35)]"
         aria-hidden="true"
       >
-        <svg viewBox="0 0 64 64" className="size-6" role="presentation">
-          <path
-            d="M32 12l4.4 10 10 4.4-10 4.4L32 41l-4.4-10.2-10-4.4 10-4.4z"
-            fill={isLight ? "#283593" : "#ffffff"}
-          />
-          <circle cx="32" cy="50" r="4" fill="#4caf7a" />
-        </svg>
+        <Image
+          src="/brand/servy-logo.png"
+          alt=""
+          width={64}
+          height={64}
+          priority
+          className="h-9 w-9 object-contain"
+        />
       </span>
       {showWordmark ? (
         <span
