@@ -2,9 +2,14 @@
 
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, ShieldCheck } from "lucide-react";
+import {
+  ArrowRight,
+  BadgeIndianRupee,
+  FileText,
+  ReceiptText,
+  ShieldCheck,
+} from "lucide-react";
 import DotGrid from "@/components/ui/DotGrid";
-import StoreButtons from "@/components/ui/StoreButtons";
 
 const Hero = () => {
   const shouldReduceMotion = useReducedMotion();
@@ -47,15 +52,15 @@ const Hero = () => {
             {...fadeUp(0)}
             className="text-[2.75rem] font-bold leading-[1.06] tracking-tight sm:text-6xl lg:text-7xl"
           >
-            Trusted help,{" "}
-            <span className="text-mint">right around the corner.</span>
+            Making domestic work{" "}
+            <span className="text-mint">financially visible.</span>
           </motion.h1>
           <motion.p
             {...fadeUp(0.16)}
             className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-white/85 sm:text-lg lg:mx-0"
           >
-            Book reliable professionals for cleaning, cooking, washing, ironing
-            and everyday services — whenever you need them.
+            Servy connects households and domestic workers through organized
+            employment, salary payments, invoices and financial records.
           </motion.p>
 
           <motion.div
@@ -63,31 +68,45 @@ const Hero = () => {
             className="mt-9 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-center lg:justify-start"
           >
             <a
-              href="#services"
+              href="#for-households"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 text-base font-semibold text-brand transition-transform duration-200 hover:scale-[1.03] active:scale-[0.98]"
             >
-              Find a Service
+              I&apos;m a Household
               <ArrowRight className="size-4" aria-hidden="true" />
             </a>
             <a
-              href="#for-professionals"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/35 px-7 py-3.5 text-base font-semibold text-white transition-colors duration-200 hover:bg-white/10"
+              href="#for-workers"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-mint px-7 py-3.5 text-base font-semibold text-brand-dark transition-transform duration-200 hover:scale-[1.03] active:scale-[0.98]"
             >
-              Become a Professional
+              I&apos;m a Domestic Worker
+              <ArrowRight className="size-4" aria-hidden="true" />
             </a>
           </motion.div>
-
-          <motion.div
-            {...fadeUp(0.32)}
-            className="mt-9 flex flex-col items-center gap-4 lg:items-start"
+          <motion.p
+            {...fadeUp(0.3)}
+            className="mt-5 text-sm font-medium tracking-wide text-white/70"
           >
-            <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/60">
-              <ShieldCheck className="size-4" aria-hidden="true" />
-              Download the app
-            </p>
-            <StoreButtons tone="light" className="justify-center lg:justify-start" />
-          </motion.div>
+            One platform. Two sides. Better records.
+          </motion.p>
+
+          <motion.ul
+            {...fadeUp(0.36)}
+            className="mt-9 flex flex-wrap items-center justify-center gap-x-7 gap-y-3 text-xs font-medium text-white/75 lg:justify-start"
+          >
+            {[
+              { icon: ShieldCheck, label: "Verified Users" },
+              { icon: BadgeIndianRupee, label: "Secure Payments" },
+              { icon: ReceiptText, label: "Official Records" },
+              { icon: FileText, label: "Financial Identity" },
+            ].map((item) => (
+              <li key={item.label} className="inline-flex items-center gap-2">
+                <item.icon className="size-4 text-mint" aria-hidden="true" />
+                {item.label}
+              </li>
+            ))}
+          </motion.ul>
         </div>
+
         <motion.div
           className="relative mx-auto w-full max-w-[380px] sm:max-w-[405px] lg:max-w-[425px]"
           initial={
@@ -102,7 +121,7 @@ const Hero = () => {
           />
           <Image
             src="/app-screens/servy-app-home.webp"
-            alt="Servy app home screen listing cleaning, cooking, washing and ironing services"
+            alt="Servy app showing household workers, salary payments and records"
             width={941}
             height={1672}
             priority
@@ -113,7 +132,6 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Curvy divider into the next section */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 bottom-0 leading-none"

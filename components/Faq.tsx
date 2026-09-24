@@ -23,8 +23,8 @@ const Faq = () => {
         <SectionHeading
           id="faq-heading"
           eyebrow="FAQ"
-          title="Everything else, answered."
-          description="A few common questions about finding help and joining Servy."
+          title="Questions, answered."
+          description="How Servy employment records, invoices and salary slips work."
         />
 
         <dl className="mt-12 space-y-3">

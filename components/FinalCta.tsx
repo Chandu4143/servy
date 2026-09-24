@@ -1,10 +1,12 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, LogIn } from "lucide-react";
 import DotGrid from "@/components/ui/DotGrid";
 import Reveal from "@/components/ui/Reveal";
 import StoreButtons from "@/components/ui/StoreButtons";
+import { siteConfig } from "@/data/site";
 
 const FinalCta = () => (
   <section
+    id="contact"
     aria-labelledby="final-cta-heading"
     className="relative isolate scroll-mt-24 overflow-hidden bg-brand px-5 py-20 text-center text-white sm:px-8 lg:py-24"
   >
@@ -29,14 +31,18 @@ const FinalCta = () => (
 
     <div className="mx-auto flex w-full max-w-3xl flex-col items-center">
       <Reveal>
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-mint">
+          Servy — Your work deserves a financial identity
+        </p>
         <h2
           id="final-cta-heading"
-          className="text-3xl font-bold leading-tight tracking-tight sm:text-4xl xl:text-5xl"
+          className="mt-3 text-3xl font-bold leading-tight tracking-tight sm:text-4xl xl:text-5xl"
         >
-          Your next task shouldn&apos;t be a hassle.
+          One platform. Two sides. Better records.
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-          Find someone you can trust and get things done with Servy.
+          Helping households manage domestic employment and records while
+          giving workers documented proof of their work and income.
         </p>
       </Reveal>
 
@@ -50,12 +56,22 @@ const FinalCta = () => (
             <ArrowRight className="size-4" aria-hidden="true" />
           </a>
           <a
-            href="#for-professionals"
+            href="#download"
             className="inline-flex items-center justify-center gap-2 rounded-full border border-white/35 px-7 py-3.5 text-base font-semibold text-white transition-colors duration-200 hover:bg-white/10"
           >
-            Become a Professional
+            <LogIn className="size-4" aria-hidden="true" />
+            Login
           </a>
         </div>
+        <p className="mt-4 text-sm text-white/70">
+          Contact us at{" "}
+          <a
+            href={`mailto:${siteConfig.contactEmail}`}
+            className="font-semibold text-white underline underline-offset-4"
+          >
+            {siteConfig.contactEmail}
+          </a>
+        </p>
       </Reveal>
 
       <Reveal delay={0.18} className="mt-10">

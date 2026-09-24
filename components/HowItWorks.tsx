@@ -12,59 +12,41 @@ const HowItWorks = () => (
       <Reveal>
         <SectionHeading
           id="how-it-works-heading"
-          eyebrow="How It Works"
-          title="Getting help is simple."
-          description="Find the right professional, choose your time and let Servy handle the rest."
+          eyebrow="How Servy Works"
+          title="Simple for the household. Valuable for the worker."
+          description="One flow creates two records — an invoice for the household and a salary slip for the worker."
         />
       </Reveal>
 
-      <ol className="mt-14 grid gap-10 sm:grid-cols-2 lg:mt-20 lg:grid-cols-4 lg:gap-0">
-        {howItWorksSteps.map((step, index) => {
-          const isFirst = index === 0;
-          const isLast = index === howItWorksSteps.length - 1;
-
-          return (
-            <li key={step.number} className="min-w-0">
-              <Reveal
-                delay={0.08 * index}
-                className="flex items-start gap-5 lg:flex-col lg:items-center lg:gap-0"
-              >
-                <div className="flex items-center lg:mb-8 lg:w-full">
-                  <span
-                    className={`servy-dashed-line hidden h-0.5 flex-1 lg:block ${
-                      isFirst ? "lg:opacity-0" : ""
-                    }`}
-                    aria-hidden="true"
-                  />
-                  <span
-                    className="grid size-16 shrink-0 place-items-center rounded-full text-xl font-bold text-white lg:size-20 lg:text-2xl"
-                    style={{
-                      background:
-                        "linear-gradient(150deg, #283593 0%, #3a4bbd 45%, #1d276f 100%)",
-                    }}
-                    aria-hidden="true"
-                  >
-                    {step.number}
-                  </span>
-                  <span
-                    className={`servy-dashed-line hidden h-0.5 flex-1 lg:block ${
-                      isLast ? "lg:opacity-0" : ""
-                    }`}
-                    aria-hidden="true"
-                  />
-                </div>
-                <div className="lg:px-3 lg:text-center">
-                  <h3 className="text-xl font-semibold text-ink sm:text-2xl">
-                    {step.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-ink-soft sm:text-base">
-                    {step.description}
-                  </p>
-                </div>
-              </Reveal>
-            </li>
-          );
-        })}
+      <ol className="mt-14 grid gap-8 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4">
+        {howItWorksSteps.slice(0, 4).map((step, index) => (
+          <li key={step.number} className="min-w-0">
+            <Reveal delay={0.06 * index}>
+              <p className="text-sm font-bold tracking-[0.2em] text-brand">
+                {step.number}
+              </p>
+              <h3 className="mt-2 text-lg font-bold text-ink">{step.title}</h3>
+              <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">
+                {step.description}
+              </p>
+            </Reveal>
+          </li>
+        ))}
+      </ol>
+      <ol className="mt-8 grid gap-8 border-t border-ink/10 pt-8 sm:grid-cols-3">
+        {howItWorksSteps.slice(4).map((step, index) => (
+          <li key={step.number} className="min-w-0">
+            <Reveal delay={0.06 * index}>
+              <p className="text-sm font-bold tracking-[0.2em] text-mint">
+                {step.number}
+              </p>
+              <h3 className="mt-2 text-lg font-bold text-ink">{step.title}</h3>
+              <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">
+                {step.description}
+              </p>
+            </Reveal>
+          </li>
+        ))}
       </ol>
     </div>
   </section>

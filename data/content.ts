@@ -1,22 +1,27 @@
 import {
+  ArrowDownToLine,
   BadgeCheck,
   BadgeIndianRupee,
+  BellRing,
+  Building2,
   CalendarCheck,
-  CalendarClock,
-  CalendarDays,
   CircleCheck,
-  Compass,
-  ListChecks,
+  FileCheck2,
+  FileText,
+  Files,
+  Fingerprint,
+  HandCoins,
+  History,
+  IdCard,
+  Landmark,
   Lock,
-  MapPin,
-  Navigation,
-  Search,
+  ReceiptText,
+  ScrollText,
   ShieldCheck,
   Smartphone,
-  Sparkles,
-  Star,
-  TrendingUp,
-  UserStar,
+  UserPlus,
+  Users,
+  Wallet,
   type LucideIcon,
 } from "lucide-react";
 
@@ -32,161 +37,316 @@ export type Step = {
   description: string;
 };
 
-export const trustItems: Feature[] = [
+/** The Servy Model — what Servy does in the middle. */
+export const servyModelItems: Feature[] = [
   {
-    title: "Verified Professionals",
-    description: "Find trusted service providers.",
-    icon: ShieldCheck,
+    title: "Employment Record",
+    description: "Who works for whom, in what role, since when.",
+    icon: IdCard,
   },
   {
-    title: "Transparent Pricing",
-    description: "Know what you're paying for.",
+    title: "Salary Processing",
+    description: "Monthly salary recorded through the Servy process.",
+    icon: HandCoins,
+  },
+  {
+    title: "Invoice",
+    description: "A household service expense record every month.",
+    icon: ReceiptText,
+  },
+  {
+    title: "Salary Slip",
+    description: "Digital proof of pay for the worker, every month.",
+    icon: FileText,
+  },
+  {
+    title: "Payment Record",
+    description: "A clear history both sides can refer back to.",
+    icon: History,
+  },
+];
+
+export const householdFeatures: Feature[] = [
+  {
+    title: "Add Domestic Workers",
+    description: "Create a record for each worker you employ.",
+    icon: UserPlus,
+  },
+  {
+    title: "Set Salary",
+    description: "Record monthly salary and employment details.",
     icon: BadgeIndianRupee,
   },
   {
-    title: "Flexible Booking",
-    description: "Choose a time that works for you.",
-    icon: CalendarCheck,
+    title: "Make / Record Salary Payments",
+    description: "Maintain a clear, month-by-month payment history.",
+    icon: Wallet,
   },
   {
-    title: "Secure Payments",
-    description: "Safe and convenient payments.",
-    icon: Lock,
+    title: "Receive Servy Invoice",
+    description: "Get an invoice for the household service expense.",
+    icon: ReceiptText,
+  },
+  {
+    title: "Download Records",
+    description: "Keep invoices and payment records organized.",
+    icon: ArrowDownToLine,
+  },
+];
+
+export const workerFeatures: Feature[] = [
+  {
+    title: "My Employer",
+    description: "See who you work for, on record.",
+    icon: Building2,
+  },
+  {
+    title: "My Role & Salary",
+    description: "Your role and monthly salary, documented.",
+    icon: BadgeCheck,
+  },
+  {
+    title: "My Salary Slips",
+    description: "A new digital slip every month you are paid.",
+    icon: FileText,
+  },
+  {
+    title: "My Payment History",
+    description: "Every salary payment, with dates, in one place.",
+    icon: History,
+  },
+  {
+    title: "My Employment History",
+    description: "Your work history builds month after month.",
+    icon: ScrollText,
+  },
+];
+
+export const workerMonthlyFlow: Step[] = [
+  {
+    number: "01",
+    title: "Salary Paid",
+    description: "The month's salary is paid and recorded.",
+  },
+  {
+    number: "02",
+    title: "Servy Salary Slip",
+    description: "A digital slip is generated for the worker.",
+  },
+  {
+    number: "03",
+    title: "Employment Record",
+    description: "The month joins the worker's employment record.",
+  },
+  {
+    number: "04",
+    title: "Work History",
+    description: "History grows — proof that the work is real.",
   },
 ];
 
 export const howItWorksSteps: Step[] = [
   {
     number: "01",
-    title: "Find",
-    description: "Tell us what service you need.",
+    title: "Household registers",
+    description: "Create your household account.",
   },
   {
     number: "02",
-    title: "Choose",
-    description: "Browse professionals, ratings and pricing.",
+    title: "Add worker",
+    description: "Add your domestic worker and employment details.",
   },
   {
     number: "03",
-    title: "Book",
-    description: "Choose your date and preferred time.",
+    title: "Define employment",
+    description: "Record role, salary and start date.",
   },
   {
     number: "04",
-    title: "Relax",
-    description: "Your professional takes care of the rest.",
+    title: "Salary is paid",
+    description: "Payment is recorded through the Servy process.",
+  },
+  {
+    number: "05",
+    title: "Household receives invoice",
+    description: "The household receives its Servy invoice.",
+  },
+  {
+    number: "06",
+    title: "Worker receives salary slip",
+    description: "The worker receives a digital salary slip.",
+  },
+  {
+    number: "07",
+    title: "Records build over time",
+    description: "Every month adds to employment and income history.",
+  },
+];
+
+export const whoServesHousehold: string[] = [
+  "Worker records",
+  "Salary management",
+  "Payments",
+  "Invoices",
+  "Employment records",
+];
+
+export const whoServesWorker: string[] = [
+  "Employment profile",
+  "Salary slips",
+  "Payment history",
+  "Employment history",
+  "Documented income",
+];
+
+export const trustItems: Feature[] = [
+  {
+    title: "Secure account access",
+    description: "Accounts protected with appropriate safeguards.",
+    icon: Lock,
+  },
+  {
+    title: "Identity verification",
+    description: "Appropriate checks so records mean something.",
+    icon: Fingerprint,
+  },
+  {
+    title: "Secure payments",
+    description: "Salary moves through secure payment infrastructure.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "Privacy controls",
+    description: "Your information stays yours — controlled sharing.",
+    icon: BellRing,
+  },
+  {
+    title: "Employment records",
+    description: "Tamper-evident, organized records for both sides.",
+    icon: Files,
+  },
+  {
+    title: "Downloadable documents",
+    description: "Invoices and slips you can keep and share.",
+    icon: FileCheck2,
+  },
+  {
+    title: "Support & grievance",
+    description: "A clear process when something needs fixing.",
+    icon: Landmark,
   },
 ];
 
 export const appHighlights: Feature[] = [
   {
-    title: "Discover",
-    description: "Browse the services available in your neighbourhood.",
-    icon: Compass,
+    title: "Workers",
+    description: "Add workers and keep employment details in one place.",
+    icon: Users,
   },
   {
-    title: "Compare",
-    description: "Look through profiles, ratings and pricing.",
-    icon: Star,
+    title: "Salary",
+    description: "Set monthly salary and track what is paid.",
+    icon: BadgeIndianRupee,
   },
   {
-    title: "Book",
-    description: "Pick the date and time that suits you.",
-    icon: CalendarCheck,
+    title: "Payments",
+    description: "Record salary payments with dates and status.",
+    icon: Wallet,
   },
   {
-    title: "Track",
-    description: "Keep an eye on your booking from start to finish.",
-    icon: Navigation,
+    title: "Invoices & Records",
+    description: "Download invoices and keep household records organized.",
+    icon: ReceiptText,
   },
 ];
 
-export const providerFeatures: Feature[] = [
+export const workerAppHighlights: Feature[] = [
   {
-    title: "Set your availability",
-    description: "Choose when you're available for bookings.",
-    icon: CalendarDays,
+    title: "Employer",
+    description: "See your employer and employment details.",
+    icon: Building2,
   },
   {
-    title: "Manage your services",
-    description: "Offer the services you're skilled at.",
-    icon: ListChecks,
+    title: "Salary",
+    description: "Know your monthly salary, on record.",
+    icon: HandCoins,
   },
   {
-    title: "Manage your bookings",
-    description: "Keep track of upcoming and completed work.",
-    icon: CalendarCheck,
+    title: "Salary Slips",
+    description: "Open every month's slip whenever you need it.",
+    icon: FileText,
   },
   {
-    title: "Track your earnings",
-    description: "Monitor your income and payouts.",
-    icon: TrendingUp,
+    title: "Employment History",
+    description: "Watch your documented work history grow.",
+    icon: ScrollText,
   },
 ];
 
 export const benefits: Feature[] = [
   {
-    title: "Trusted Professionals",
-    description: "Discover professionals with ratings and reviews.",
-    icon: BadgeCheck,
+    title: "For households",
+    description: "Pay → Receive Invoice → Keep Records.",
+    icon: ReceiptText,
   },
   {
-    title: "Flexible Scheduling",
-    description: "Book according to your preferred date and time.",
-    icon: CalendarClock,
+    title: "For workers",
+    description: "Work → Receive Salary Slip → Build Work History.",
+    icon: FileText,
   },
   {
-    title: "Transparent Pricing",
-    description: "See pricing before confirming your booking.",
-    icon: BadgeIndianRupee,
+    title: "One trusted bridge",
+    description:
+      "Servy connects informal domestic work with organized records.",
+    icon: CircleCheck,
   },
   {
-    title: "Easy Booking",
-    description: "Find and book services without unnecessary steps.",
-    icon: ListChecks,
+    title: "Every month counts",
+    description: "Each salary adds to a longer financial story.",
+    icon: CalendarCheck,
   },
   {
-    title: "Local Service",
-    description: "Discover professionals available around you.",
-    icon: MapPin,
+    title: "Documents both sides",
+    description: "Invoices for the household, slips for the worker.",
+    icon: Files,
   },
   {
-    title: "One Simple App",
-    description: "Everything from discovery to booking in one place.",
+    title: "One simple app",
+    description: "Workers, salary, payments and records in your pocket.",
     icon: Smartphone,
   },
 ];
 
 export const journeySteps: Feature[] = [
   {
-    title: "Search",
-    description: "Pick the service you need.",
-    icon: Search,
+    title: "Register",
+    description: "Household creates its account.",
+    icon: UserPlus,
   },
   {
-    title: "Choose Professional",
-    description: "Compare profiles, ratings and pricing.",
-    icon: UserStar,
+    title: "Add worker",
+    description: "Worker and employment details recorded.",
+    icon: Users,
   },
   {
-    title: "Select Date & Time",
-    description: "Choose a slot that fits your day.",
-    icon: CalendarClock,
+    title: "Define salary",
+    description: "Role, salary and start date set.",
+    icon: BadgeIndianRupee,
   },
   {
-    title: "Confirm",
-    description: "Review the details and confirm.",
-    icon: CircleCheck,
+    title: "Salary paid",
+    description: "Monthly payment recorded.",
+    icon: Wallet,
   },
   {
-    title: "Professional Arrives",
-    description: "Track the visit in the Servy app.",
-    icon: Navigation,
+    title: "Invoice issued",
+    description: "Household receives its record.",
+    icon: ReceiptText,
   },
   {
-    title: "Service Complete",
-    description: "Your task is done — rate the professional.",
-    icon: Sparkles,
+    title: "Slip issued",
+    description: "Worker receives proof of pay.",
+    icon: FileText,
   },
 ];
 
@@ -197,33 +357,33 @@ export type FaqItem = {
 
 export const faqItems: FaqItem[] = [
   {
-    question: "What can I book on Servy?",
+    question: "What is Servy?",
     answer:
-      "Servy covers everyday household help such as cleaning, cooking, washing and ironing, along with services like AC servicing, plumbing and electrical work.",
+      "Servy connects households and domestic workers through organized employment, salary payments, invoices and financial records — one relationship, two financial records.",
   },
   {
-    question: "How do I find the right professional?",
+    question: "What does a household get every month?",
     answer:
-      "Browse the professionals available near you, look through their profiles, ratings and pricing, and choose the person who fits what you need.",
+      "Each month the salary is paid and recorded, the household receives a Servy invoice — a document for the household service expense, with invoice number, worker, service period, amount and payment status.",
   },
   {
-    question: "Can I choose when the service happens?",
+    question: "What does a domestic worker get every month?",
     answer:
-      "Yes. You pick the date and the time slot that works for you while booking, so the visit fits around your day.",
+      "Each month the worker receives a digital Servy salary slip showing employer, role, salary month, salary paid, payment date and employment ID — plus a growing employment and payment history.",
   },
   {
-    question: "How do I keep track of my booking?",
+    question: "Can household expenses be claimed for tax?",
     answer:
-      "Every booking you place appears in the Servy app, so you can check the details and follow the status of the visit in one place.",
+      "Keep your Servy invoice with your household financial records. Where applicable, consult your tax professional regarding whether and how such expenses can be claimed or reported under current tax rules.",
   },
   {
-    question: "How does pricing work?",
+    question: "Does Servy guarantee loans or credit approval?",
     answer:
-      "You see the pricing for a service before you confirm the booking, so there are no surprises at the end of the visit.",
+      "No. Servy creates organized records of employment and income. These records may help workers demonstrate work and income history to institutions, but financial institutions make their own decisions.",
   },
   {
-    question: "I offer these services — how do I join Servy?",
+    question: "How do I start?",
     answer:
-      "Download the Servy app and register as a service professional. You can then set your availability, list the services you offer and manage your bookings and earnings from the app.",
+      "A household registers, adds the domestic worker with role, salary and start date, then records the monthly salary through the Servy process. Invoices and salary slips follow automatically each month.",
   },
 ];

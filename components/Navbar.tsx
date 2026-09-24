@@ -106,7 +106,17 @@ const Navbar = () => {
           })}
         </ul>
 
-        <div className="hidden lg:flex">
+        <div className="hidden items-center gap-2 lg:flex">
+          <a
+            href="#download"
+            className={`inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors duration-200 ${
+              solidHeader
+                ? "border-ink/10 text-ink hover:border-brand hover:text-brand"
+                : "border-white/35 text-white hover:bg-white/10"
+            }`}
+          >
+            Login
+          </a>
           <a
             href="#download"
             className={`inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors duration-200 ${

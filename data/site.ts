@@ -7,13 +7,13 @@
  */
 export const siteConfig = {
   name: "Servy",
-  title: "Servy — Trusted Help, Right Around the Corner",
+  title: "Servy — Your work deserves a financial identity",
   description:
-    "Find trusted professionals for cleaning, cooking, washing, ironing and everyday home services with Servy.",
+    "Helping households manage domestic employment and records while giving workers documented proof of their work and income.",
   url: "https://servy.in",
-  tagline: "Trusted help, right around the corner.",
+  tagline: "Your work deserves a financial identity.",
   footerNote:
-    "Making everyday services simpler, more accessible and more convenient.",
+    "Servy creates a bridge between informal domestic work and organized financial records.",
   /** Placeholders — swap in the published store listings. */
   appStoreUrl: "#download",
   playStoreUrl: "#download",
@@ -29,10 +29,12 @@ export type NavLink = {
 
 export const navLinks: NavLink[] = [
   { label: "Home", href: "#home" },
-  { label: "Services", href: "#services" },
+  { label: "For Households", href: "#for-households" },
+  { label: "For Workers", href: "#for-workers" },
   { label: "How It Works", href: "#how-it-works" },
-  { label: "For Professionals", href: "#for-professionals" },
-  { label: "Download", href: "#download" },
+  { label: "Financial Identity", href: "#financial-identity" },
+  { label: "About", href: "#about" },
+  { label: "Contact", href: "#contact" },
 ];
 
 /** Section ids observed by the navbar scroll-spy. */
@@ -42,16 +44,19 @@ export const footerLinks: { title: string; links: NavLink[] }[] = [
   {
     title: "Explore",
     links: [
-      { label: "Services", href: "#services" },
+      { label: "For Households", href: "#for-households" },
+      { label: "For Workers", href: "#for-workers" },
       { label: "How It Works", href: "#how-it-works" },
-      { label: "For Professionals", href: "#for-professionals" },
-      { label: "Download", href: "#download" },
+      { label: "Invoices", href: "#invoices" },
+      { label: "Salary Slips", href: "#salary-slips" },
+      { label: "Financial Identity", href: "#financial-identity" },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "About", href: "#why-servy" },
+      { label: "About", href: "#about" },
+      { label: "Trust & Security", href: "#trust-security" },
       { label: "FAQ", href: "#faq" },
       { label: "Contact", href: `mailto:${siteConfig.contactEmail}` },
     ],
