@@ -130,7 +130,7 @@ const Hero = () => {
           aria-hidden="true"
         >
           <Image
-            src="/images/hero-family.webp"
+            src="/images/hero-family-living.webp"
             alt=""
             fill
             priority
@@ -168,7 +168,7 @@ const Hero = () => {
         transition={{ duration: 0.85, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
       >
         <Image
-          src="/images/hero-family.webp"
+          src="/images/hero-family-living.webp"
           alt="Indian household smiling together with their domestic worker"
           width={1448}
           height={1086}
