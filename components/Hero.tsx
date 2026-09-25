@@ -121,38 +121,61 @@ const Hero = () => {
           </motion.ul>
         </div>
 
+        {/* Desktop: full-bleed photo filling the right half, melting into the indigo */}
         <motion.div
-          className="relative mx-auto w-full max-w-[560px] lg:max-w-none"
+          className="absolute inset-y-0 right-0 hidden w-[54%] lg:block"
+          initial={shouldReduceMotion ? false : { opacity: 0 }}
+          animate={shouldReduceMotion ? undefined : { opacity: 1 }}
+          transition={{ duration: 0.9, delay: 0.15 }}
+          aria-hidden="true"
+        >
+          <Image
+            src="/images/hero-family.webp"
+            alt=""
+            fill
+            priority
+            fetchPriority="high"
+            sizes="54vw"
+            className="object-cover object-center [mask-image:linear-gradient(to_right,transparent,black_22%,black_88%,transparent_100%)]"
+          />
+        </motion.div>
+
+        {/* Desktop: phone standing over the photo */}
+        <motion.div
+          className="absolute right-10 top-1/2 hidden w-48 -translate-y-1/2 xl:right-16 xl:w-56"
           initial={
             shouldReduceMotion ? false : { opacity: 0, y: 42, scale: 0.96 }
           }
           animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.85, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.85, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
         >
-          <span
-            className="absolute inset-x-6 top-14 -z-10 h-64 rounded-[3rem] bg-brand-mid/45 blur-2xl"
-            aria-hidden="true"
-          />
-          <Image
-            src="/images/hero-family.webp"
-            alt="Indian household smiling together with their domestic worker"
-            width={1448}
-            height={1086}
-            priority
-            fetchPriority="high"
-            sizes="(min-width: 1024px) 560px, 90vw"
-            className="h-auto w-full rounded-[2rem] object-cover shadow-float ring-1 ring-white/20"
-          />
           <Image
             src="/app-screens/servy-app-home.webp"
             alt="Servy app showing household workers, salary payments and records"
             width={941}
             height={1672}
-            sizes="(min-width: 1024px) 170px, 30vw"
-            className="absolute -bottom-10 -right-2 h-auto w-28 sm:-right-5 sm:w-36 lg:w-44"
+            sizes="224px"
+            className="h-auto w-full drop-shadow-2xl"
           />
         </motion.div>
       </div>
+
+      {/* Mobile / tablet: full-bleed photo band below the text */}
+      <motion.div
+        className="relative mt-12 lg:hidden"
+        initial={shouldReduceMotion ? false : { opacity: 0, y: 32 }}
+        animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+        transition={{ duration: 0.85, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <Image
+          src="/images/hero-family.webp"
+          alt="Indian household smiling together with their domestic worker"
+          width={1448}
+          height={1086}
+          sizes="100vw"
+          className="h-72 w-full object-cover object-center [mask-image:linear-gradient(to_bottom,transparent,black_20%,black_80%,transparent)] sm:h-96"
+        />
+      </motion.div>
 
       <div
         aria-hidden="true"
