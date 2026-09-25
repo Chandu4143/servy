@@ -10,6 +10,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import DotGrid from "@/components/ui/DotGrid";
+import StoreButtons from "@/components/ui/StoreButtons";
 
 const Hero = () => {
   const shouldReduceMotion = useReducedMotion();
@@ -89,9 +90,22 @@ const Hero = () => {
             One platform. Two sides. Better records.
           </motion.p>
 
+          <motion.div
+            {...fadeUp(0.33)}
+            className="mt-8 flex flex-col items-center gap-3 lg:items-start"
+          >
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/60">
+              Download the app
+            </p>
+            <StoreButtons
+              tone="light"
+              className="justify-center lg:justify-start"
+            />
+          </motion.div>
+
           <motion.ul
             {...fadeUp(0.36)}
-            className="mt-9 flex flex-wrap items-center justify-center gap-x-7 gap-y-3 text-xs font-medium text-white/75 lg:justify-start"
+            className="mt-8 flex flex-wrap items-center justify-center gap-x-7 gap-y-3 text-xs font-medium text-white/75 lg:justify-start"
           >
             {[
               { icon: ShieldCheck, label: "Verified Users" },
