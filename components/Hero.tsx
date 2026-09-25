@@ -122,7 +122,7 @@ const Hero = () => {
         </div>
 
         <motion.div
-          className="relative mx-auto w-full max-w-[380px] sm:max-w-[405px] lg:max-w-[425px]"
+          className="relative mx-auto w-full max-w-[560px] lg:max-w-none"
           initial={
             shouldReduceMotion ? false : { opacity: 0, y: 42, scale: 0.96 }
           }
@@ -134,14 +134,22 @@ const Hero = () => {
             aria-hidden="true"
           />
           <Image
+            src="/images/hero-family.webp"
+            alt="Indian household smiling together with their domestic worker"
+            width={1448}
+            height={1086}
+            priority
+            fetchPriority="high"
+            sizes="(min-width: 1024px) 560px, 90vw"
+            className="h-auto w-full rounded-[2rem] object-cover shadow-float ring-1 ring-white/20"
+          />
+          <Image
             src="/app-screens/servy-app-home.webp"
             alt="Servy app showing household workers, salary payments and records"
             width={941}
             height={1672}
-            priority
-            fetchPriority="high"
-            sizes="(min-width: 1024px) 425px, 80vw"
-            className="h-auto w-full"
+            sizes="(min-width: 1024px) 170px, 30vw"
+            className="absolute -bottom-10 -right-2 h-auto w-28 sm:-right-5 sm:w-36 lg:w-44"
           />
         </motion.div>
       </div>

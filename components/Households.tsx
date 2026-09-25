@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -59,46 +60,15 @@ const Households = () => (
       </div>
 
       <Reveal delay={0.1}>
-        <article className="overflow-hidden rounded-3xl border border-ink/5 bg-canvas shadow-card">
-          <div className="flex items-center justify-between bg-brand px-6 py-4 text-white">
-            <p className="text-sm font-bold tracking-wide">
-              Household · Kumar Family
-            </p>
-            <p className="rounded-full bg-white/15 px-3 py-1 text-xs font-semibold">
-              1 worker
-            </p>
-          </div>
-          <div className="space-y-3 p-6">
-            <div className="flex items-center justify-between rounded-2xl bg-white p-4 shadow-card">
-              <div>
-                <p className="text-sm font-semibold text-ink">Lakshmi</p>
-                <p className="text-xs text-ink-soft">
-                  Domestic Worker · Since Jan 2024
-                </p>
-              </div>
-              <p className="text-sm font-bold text-brand">₹18,000/mo</p>
-            </div>
-            {[
-              { month: "September 2026", status: "Paid" },
-              { month: "August 2026", status: "Paid" },
-              { month: "July 2026", status: "Paid" },
-            ].map((row) => (
-              <div
-                key={row.month}
-                className="flex items-center justify-between rounded-2xl bg-white px-4 py-3 text-sm"
-              >
-                <span className="font-medium text-ink">{row.month}</span>
-                <span className="rounded-full bg-mint-soft px-3 py-1 text-xs font-semibold text-brand-dark">
-                  {row.status}
-                </span>
-              </div>
-            ))}
-            <p className="px-1 pt-1 text-xs leading-relaxed text-ink-soft">
-              Every payment links to a Servy invoice and the worker&apos;s
-              salary slip.
-            </p>
-          </div>
-        </article>
+        <Image
+          src="/images/household-man.webp"
+          alt="Household member managing workers and salary payments on the Servy app"
+          width={1448}
+          height={1086}
+          sizes="(min-width: 1024px) 560px, 90vw"
+          loading="lazy"
+          className="h-auto w-full rounded-3xl object-cover shadow-float"
+        />
       </Reveal>
     </div>
   </section>

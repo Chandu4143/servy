@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -24,21 +25,35 @@ const Workers = () => (
         />
       </Reveal>
 
-      <ol className="mt-12 grid gap-4 sm:grid-cols-2 lg:mt-14 lg:grid-cols-4">
-        {workerMonthlyFlow.map((step) => (
-          <Reveal key={step.number} delay={0.05} distance={18}>
-            <li className="h-full rounded-3xl border border-ink/5 bg-canvas p-6">
-              <p className="text-xs font-bold tracking-[0.2em] text-brand">
-                {step.number}
-              </p>
-              <p className="mt-2 text-lg font-bold text-ink">{step.title}</p>
-              <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">
-                {step.description}
-              </p>
-            </li>
-          </Reveal>
-        ))}
-      </ol>
+      <div className="mt-12 grid items-center gap-10 lg:mt-14 lg:grid-cols-2">
+        <ol className="grid gap-4 sm:grid-cols-2">
+          {workerMonthlyFlow.map((step) => (
+            <Reveal key={step.number} delay={0.05} distance={18}>
+              <li className="h-full rounded-3xl border border-ink/5 bg-canvas p-6">
+                <p className="text-xs font-bold tracking-[0.2em] text-brand">
+                  {step.number}
+                </p>
+                <p className="mt-2 text-lg font-bold text-ink">{step.title}</p>
+                <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">
+                  {step.description}
+                </p>
+              </li>
+            </Reveal>
+          ))}
+        </ol>
+
+        <Reveal delay={0.1}>
+          <Image
+            src="/images/worker-woman.webp"
+            alt="Domestic worker checking her salary slip on the Servy app"
+            width={1448}
+            height={1086}
+            sizes="(min-width: 1024px) 560px, 90vw"
+            loading="lazy"
+            className="h-auto w-full rounded-3xl object-cover shadow-float"
+          />
+        </Reveal>
+      </div>
 
       <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
         {workerFeatures.map((feature, index) => (
