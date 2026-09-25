@@ -1,3 +1,9 @@
+/**
+ * IdentitySection (`#financial-identity`) — indigo "financial identity" band.
+ * Left: mock worker profile card (stats are hardcoded demo values).
+ * Right: explainer + compliance disclaimer ("Servy creates the record.
+ * Institutions decide." — keep this wording, don't promise loans/credit).
+ */
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 

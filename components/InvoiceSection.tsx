@@ -1,3 +1,10 @@
+/**
+ * InvoiceSection (`#invoices`) — sample "SERVY INVOICE" document UI.
+ * Left card is a static mock (Kumar Family / ₹18,000) showing what a
+ * household receives monthly. Right card lists benefits. Buttons are
+ * `#download` placeholders — they don't download a real file yet.
+ * To use real data later, replace the hardcoded <dl> with props/API data.
+ */
 import { ArrowRight, CircleCheck, Download } from "lucide-react";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";

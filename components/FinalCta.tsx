@@ -1,3 +1,9 @@
+/**
+ * FinalCta (`#contact`) — closing indigo CTA band + contact email.
+ * Mirrors the hero palette to bookend the page. Contains Get Started /
+ * Login placeholders, the support email from `siteConfig`, and store
+ * badges. The `contact` id is what footer "Contact" links scroll to.
+ */
 import { ArrowRight, LogIn } from "lucide-react";
 import DotGrid from "@/components/ui/DotGrid";
 import Reveal from "@/components/ui/Reveal";

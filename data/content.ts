@@ -1,3 +1,11 @@
+/**
+ * Page copy + feature lists for every section.
+ *
+ * EDITING GUIDE: change text here instead of inside components.
+ * Each export feeds one section (e.g. `howItWorksSteps` → HowItWorks,
+ * `faqItems` → Faq). `Feature.icon` must be a `lucide-react` icon.
+ * Keep descriptions short (1 line) so cards stay uniform.
+ */
 import {
   ArrowDownToLine,
   BadgeCheck,

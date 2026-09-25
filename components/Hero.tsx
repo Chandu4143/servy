@@ -1,3 +1,12 @@
+/**
+ * Hero (`#home`) — first screen, indigo band with headline + app visual.
+ *
+ * Layout: two CTAs ("Household" / "Worker") route to their sections below;
+ * right side shows a full-bleed family photo with the app screenshot
+ * floating over it on desktop, stacked below text on mobile.
+ * The wave SVG at the bottom blends into the off-white page background.
+ * Images: `public/images/hero-family-living.webp` + `servy-app-home.webp`.
+ */
 "use client";
 
 import Image from "next/image";

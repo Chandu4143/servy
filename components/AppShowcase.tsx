@@ -1,3 +1,10 @@
+/**
+ * AppShowcase (`#download`) — app download section, nav target for all
+ * "Get Started" CTAs site-wide. Three columns: household features
+ * (`appHighlights`), centered phone screenshot, worker features
+ * (`workerAppHighlights`). Store badges are placeholders until real
+ * listings ship — update URLs in `siteConfig` (`data/site.ts`).
+ */
 import Image from "next/image";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";

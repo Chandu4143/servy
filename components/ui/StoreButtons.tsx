@@ -1,3 +1,10 @@
+/**
+ * StoreButtons — App Store / Google Play badges (Hero, AppShowcase, CTA).
+ * Artwork: `public/brand/app-store.png`, `google-play.png`.
+ * Links (`appStoreUrl` / `playStoreUrl` in siteConfig) are `#download`
+ * placeholders — swap in real store URLs when the app ships. The `tone`
+ * prop is currently unused and kept for future dark/light badge variants.
+ */
 import Image from "next/image";
 import { siteConfig } from "@/data/site";
 

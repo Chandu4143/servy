@@ -1,3 +1,9 @@
+/**
+ * Households (`#for-households`) — the employer-side pitch.
+ * Left: heading + `householdFeatures` checklist from `data/content.ts`.
+ * Right: `household-man.webp` photo. CTA scrolls to `#download`
+ * (placeholder — connect to real signup/store link when ready).
+ */
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Reveal from "@/components/ui/Reveal";

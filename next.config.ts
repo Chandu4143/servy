@@ -1,3 +1,9 @@
+/**
+ * Next.js config.
+ * - `images.formats`: serve AVIF first, WebP fallback for smaller assets.
+ * - `optimizePackageImports`: tree-shake lucide-react + framer-motion.
+ * No custom domains, redirects, or backend rewrites — this is static.
+ */
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {

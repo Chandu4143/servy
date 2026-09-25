@@ -1,3 +1,9 @@
+/**
+ * ServyModel (`#model`) — "One relationship. Two financial records."
+ * Three-card diagram: Household → Servy (bridge) → Worker.
+ * Middle card lists `servyModelItems` from `data/content.ts`.
+ * Arrows show only on desktop; cards stack vertically on mobile.
+ */
 import { ArrowRight, House, UserRound } from "lucide-react";
 import Image from "next/image";
 import Reveal from "@/components/ui/Reveal";

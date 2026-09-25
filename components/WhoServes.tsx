@@ -1,3 +1,9 @@
+/**
+ * WhoServes — "One platform. Two benefits." summary cards.
+ * Two-column recap: household flow (white card) vs worker flow (indigo).
+ * Lists come from `whoServesHousehold` / `whoServesWorker` in data file.
+ * No section id (not in nav) — purely a visual bridge between flows.
+ */
 import { CircleCheck } from "lucide-react";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";

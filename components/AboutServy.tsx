@@ -1,3 +1,9 @@
+/**
+ * AboutServy (`#about`) — Vision / Mission cards.
+ * Static copy, no data dependency. Keep statements aspirational but
+ * factual — don't add user counts, cities, or awards without proof
+ * (see "Important Product Rules" in idea.md).
+ */
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 

@@ -1,3 +1,9 @@
+/**
+ * Footer — brand blurb + link columns + giant "Servy" wordmark.
+ * Columns come from `footerLinks` in `data/site.ts`; legal links route
+ * to `/privacy` and `/terms`. The oversized wordmark is decorative
+ * (aria-hidden) with a fade mask so it melts into the page bottom.
+ */
 import { footerLinks, siteConfig } from "@/data/site";
 
 const Footer = () => (

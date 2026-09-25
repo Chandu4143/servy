@@ -1,3 +1,13 @@
+/**
+ * Navbar — fixed header with scroll-spy + mobile drawer.
+ *
+ * - Links come from `navLinks` in `data/site.ts`; section highlight comes
+ *   from `sectionIds` via IntersectionObserver.
+ * - Transparent over the indigo hero, frosted-white once scrolled.
+ * - Mobile menu locks body scroll, closes on Escape, animates with
+ *   framer-motion (disabled for reduced-motion users).
+ * - All CTAs are `#download` placeholders — wire to real URLs later.
+ */
 "use client";
 
 import { useCallback, useEffect, useState } from "react";

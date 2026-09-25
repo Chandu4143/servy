@@ -1,3 +1,14 @@
+/**
+ * Global styles + Tailwind v4 design tokens.
+ *
+ * - `@theme` defines the Servy palette as utilities: `bg-brand`,
+ *   `text-ink-soft`, `bg-mint-soft`, `bg-canvas`, `text-danger`, etc.
+ *   To rebrand, change the hex values here — components pick them up.
+ * - Base layer sets smooth scrolling, selection color, and a visible
+ *   focus ring for accessibility.
+ * - `.servy-dot-grid` / `.servy-dashed-line` are decorative helpers.
+ * - Reduced-motion users get all animation disabled at the bottom.
+ */
 @import "tailwindcss";
 
 @theme {

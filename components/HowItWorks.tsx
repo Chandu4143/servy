@@ -1,3 +1,9 @@
+/**
+ * HowItWorks (`#how-it-works`) — 7-step onboarding timeline.
+ * Steps come from `howItWorksSteps` in `data/content.ts`.
+ * Row 1 shows steps 1–4 (brand numbers), row 2 shows steps 5–7
+ * (mint numbers, the monthly invoice/slip payoff). Edit copy in data file.
+ */
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { howItWorksSteps } from "@/data/content";

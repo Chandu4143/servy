@@ -1,3 +1,16 @@
+/**
+ * Root layout — wraps every page on the site.
+ *
+ * What lives here:
+ * - Global font (Inter) + `app/globals.css` design tokens.
+ * - Site-wide SEO (title template, Open Graph, Twitter cards) built from
+ *   `data/site.ts` so brand copy only needs updating in one place.
+ * - JSON-LD structured data for Google rich results.
+ * - Skip-to-content link for keyboard users.
+ *
+ * New maintainer: you almost never need to touch this file except to
+ * change global SEO defaults. Per-page titles live in each `page.tsx`.
+ */
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";

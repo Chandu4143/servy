@@ -1,3 +1,12 @@
+/**
+ * Home page (`/`).
+ *
+ * This is a static single-page marketing site — NOT the Servy product.
+ * There is no auth, booking, payments, or backend here, only anchor
+ * sections rendered top-to-bottom. To reorder the page, just reorder
+ * the components below. To edit copy, see `data/content.ts` and
+ * `data/site.ts` first — most text lives there, not in the components.
+ */
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import ServyModel from "@/components/ServyModel";

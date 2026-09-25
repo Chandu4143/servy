@@ -1,3 +1,10 @@
+/**
+ * Faq (`#faq`) — accessible accordion (first item open by default).
+ * Questions come from `faqItems` in `data/content.ts`.
+ * - Only one panel open at a time; clicking the open one collapses it.
+ * - Uses button + aria-expanded/controls, animates height with
+ *   framer-motion (opacity-only for reduced-motion users).
+ */
 "use client";
 
 import { useState } from "react";

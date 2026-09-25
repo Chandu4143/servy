@@ -1,3 +1,9 @@
+/**
+ * Privacy Policy page (`/privacy`).
+ * Static copy rendered through the shared `LegalDoc` layout.
+ * NOTE: this is a plain-language placeholder — have it reviewed by
+ * legal before launch. Edit the `sections` array below to change copy.
+ */
 import type { Metadata } from "next";
 import LegalDoc, { type LegalSection } from "@/components/LegalDoc";
 import { siteConfig } from "@/data/site";

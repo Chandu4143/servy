@@ -1,3 +1,8 @@
+/**
+ * `sitemap.xml` — generated automatically by Next.js at `/sitemap.xml`.
+ * Lists the only three routes on this static site: `/`, `/privacy`,
+ * `/terms`. Add a new entry here if you add a new top-level page.
+ */
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/data/site";
 

@@ -1,3 +1,10 @@
+/**
+ * SalarySlipSection (`#salary-slips`) — sample "SERVY SALARY SLIP" UI.
+ * Left card is a static mock (Lakshmi / ₹18,000 / Sept 2026) showing what
+ * a worker receives monthly. Right card lists worker benefits.
+ * Download/Share buttons are `#download` placeholders. Like the invoice
+ * section, swap the hardcoded values for real data when backend exists.
+ */
 import { ArrowRight, CircleCheck, Download, Share2 } from "lucide-react";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";

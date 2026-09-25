@@ -1,3 +1,10 @@
+/**
+ * Reveal — scroll-triggered fade-up wrapper used by every section.
+ * - Default: animates once when 25% visible (`whileInView`).
+ * - `immediate`: animate on mount (hero / above-the-fold use).
+ * - `delay` / `distance`: stagger + travel. Reduced-motion users get
+ *   plain <div> with no animation. Keep durations short (~0.6s).
+ */
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";

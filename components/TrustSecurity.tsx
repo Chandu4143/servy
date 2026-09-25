@@ -1,3 +1,9 @@
+/**
+ * TrustSecurity (`#trust-security`) — 7-card trust grid.
+ * Cards come from `trustItems` in `data/content.ts` (icon + title + blurb).
+ * 4 columns on desktop, 2 on tablet, 1 on mobile. Add/remove items in
+ * the data file — the grid adapts automatically.
+ */
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { trustItems } from "@/data/content";

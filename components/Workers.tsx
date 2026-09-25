@@ -1,3 +1,9 @@
+/**
+ * Workers (`#for-workers`) — the worker-side pitch.
+ * Top: 4-step monthly flow (`workerMonthlyFlow`) + worker photo.
+ * Bottom: 5 feature cards (`workerFeatures`) from `data/content.ts`.
+ * CTA scrolls to `#download` (placeholder for worker onboarding link).
+ */
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Reveal from "@/components/ui/Reveal";

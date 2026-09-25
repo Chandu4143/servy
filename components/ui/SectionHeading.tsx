@@ -1,3 +1,10 @@
+/**
+ * SectionHeading — consistent eyebrow + H2 + description block.
+ * Props: `eyebrow` (small caps kicker), `title` (accepts JSX for
+ * highlighted spans), `description`, `align` (center/left),
+ * `tone` ("dark" on light bg, "light" on indigo bg). Pass `id` to wire
+ * `aria-labelledby` from the parent <section>.
+ */
 import type { ReactNode } from "react";
 
 type SectionHeadingProps = {
